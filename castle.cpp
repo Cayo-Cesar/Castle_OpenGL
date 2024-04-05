@@ -139,12 +139,17 @@ void display(void){
     glVertex2f(100, 0); // Canto inferior esquerdo quadrado 1
 	glEnd();
 	
+	// Copia e translação da torre da esquerda para a torre da direita
+	glPushMatrix(); // Salva a matriz de transformação atual
+	glTranslatef(800, 0, 0); // Translada para a posição desejada
 	glBegin(GL_QUADS);
-    glVertex2f(900, 700); // Canto superior esquerdo quadrado 1
-    glVertex2f(1100, 700); // Canto superior direito quadrado 1
-    glVertex2f(1100, 0); // Canto inferior direito quadrado 1
-    glVertex2f(900, 0); // Canto inferior esquerdo quadrado 1
+    glVertex2f(100, 700); // Canto superior esquerdo quadrado 1
+    glVertex2f(300, 700); // Canto superior direito quadrado 1
+    glVertex2f(300, 0); // Canto inferior direito quadrado 1
+    glVertex2f(100, 0); // Canto inferior esquerdo quadrado 1
 	glEnd();
+	glPopMatrix(); // Restaura a matriz de transformação
+
 	
 	glBegin(GL_QUADS);
     glVertex2f(500, 800); // Canto superior esquerdo quadrado 1
