@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout>
 	<Files>
-		<File Name="castle.cpp" Top="Yes" Tabpos="1" TopLine="139">
-			<Cursor Line="146" Column="28"/>
+		<File Name="castle.cpp" Top="Yes" Tabpos="1" TopLine="1">
+			<Cursor Line="80" Column="23"/>
 		</File>
 		<File Name="circulo.h" Top="No" Tabpos="2" TopLine="1">
-			<Cursor Line="35" Column="1"/>
-			<Selection Line="1" Column="1"/>
+			<Cursor Line="17" Column="2"/>
 		</File>
 	</Files>
 </Layout>

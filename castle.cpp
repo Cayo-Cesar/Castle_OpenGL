@@ -73,7 +73,7 @@ void reshape(int w, int h)
     // Definindo o Viewport para o tamanho da janela
 	glViewport(0, 0, w, h);
 
-    glOrtho (0, 2000, 0, 2000, -1 ,1);  // Define o volume de projecao ortografica;
+    glOrtho (0, 1500, 0, 1500, -1 ,1);  // Define o volume de projecao ortografica;
                                       // Nesse caso, o ponto (0,0,0) se encontra no
                                       // canto inferior esquerdo da tela e o viewport
                                       // tem 0 a 512 pixel no eixo x, 0 a 512 pixel no
@@ -130,7 +130,7 @@ void display(void){
 
     //Pilastras
     
-    glColor3f(1, 0.761, 0);
+    glColor3f(1, 0.5, 0);
     
     glBegin(GL_QUADS);
     glVertex2f(100, 700); // Canto superior esquerdo quadrado 1
@@ -138,8 +138,6 @@ void display(void){
     glVertex2f(300, 0); // Canto inferior direito quadrado 1
     glVertex2f(100, 0); // Canto inferior esquerdo quadrado 1
 	glEnd();
-	
-	glColor3f(1, 0.761, 0);
 	
 	glBegin(GL_QUADS);
     glVertex2f(900, 700); // Canto superior esquerdo quadrado 1
@@ -252,8 +250,132 @@ void display(void){
 
 
     // Funcao criada para desenhar circulos
-    //desenhaCirculo(50,500,true);
-
+    glColor3f(0, 1, 1); // cor cinza para o círculo
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(1000, 500, 0); // Translada para a posição desejada
+    desenhaCirculo(70, 100, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(200, 500, 0); // Translada para a posição desejada
+    desenhaCirculo(70, 100, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(600, 650, 0); // Translada para a posição desejada
+    desenhaCirculo(70, 100, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    glColor3f(1, 1, 0);
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(600, 100, 0); // Translada para a posição desejada
+    desenhaCirculo(30, 100, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    glColor3f(0, 0, 0);
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(600, 100, 0); // Translada para a posição desejada
+    desenhaCirculo(20, 100, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    glColor3f(1, 1, 0);
+    glPushMatrix(); // Salva a matriz de transformação atual
+    glTranslatef(600, 125, 0); // Translada para a posição desejada
+    desenhaCirculo(15, 110, true); // raio 100, 50 linhas, preenchido
+    glPopMatrix(); // Restaura a matriz de transformação
+    
+    //Quadradinhos Colunas
+    
+    glColor3f(1, 1, 0);
+    
+    glBegin(GL_QUADS);
+    glVertex2f(210, 100); // Canto superior esquerdo quadrado 1
+    glVertex2f(290, 100); // Canto superior direito quadrado 1
+    glVertex2f(290,60); // Canto inferior direito quadrado 1
+    glVertex2f(210, 60); // Canto inferior esquerdo quadrado 1
+	glEnd();
+    
+    glBegin(GL_QUADS);
+    glVertex2f(110, 200); // Canto superior esquerdo quadrado 1
+    glVertex2f(190, 200); // Canto superior direito quadrado 1
+    glVertex2f(190, 160); // Canto inferior direito quadrado 1
+    glVertex2f(110, 160); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(210, 300); // Canto superior esquerdo quadrado 1
+    glVertex2f(290, 300); // Canto superior direito quadrado 1
+    glVertex2f(290, 260); // Canto inferior direito quadrado 1
+    glVertex2f(210, 260); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(110, 400); // Canto superior esquerdo quadrado 1
+    glVertex2f(190, 400); // Canto superior direito quadrado 1
+    glVertex2f(190, 360); // Canto inferior direito quadrado 1
+    glVertex2f(110, 360); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(910, 100); // Canto superior esquerdo quadrado 1
+    glVertex2f(990, 100); // Canto superior direito quadrado 1
+    glVertex2f(990, 60); // Canto inferior direito quadrado 1
+    glVertex2f(910, 60); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(1010, 200); // Canto superior esquerdo quadrado 1
+    glVertex2f(1090, 200); // Canto superior direito quadrado 1
+    glVertex2f(1090, 160); // Canto inferior direito quadrado 1
+    glVertex2f(1010, 160); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(910, 300); // Canto superior esquerdo quadrado 1
+    glVertex2f(990, 300); // Canto superior direito quadrado 1
+    glVertex2f(990, 260); // Canto inferior direito quadrado 1
+    glVertex2f(910, 260); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+    glVertex2f(1010, 400); // Canto superior esquerdo quadrado 1
+    glVertex2f(1090, 400); // Canto superior direito quadrado 1
+    glVertex2f(1090, 360); // Canto inferior direito quadrado 1
+    glVertex2f(1010, 360); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	//Quadradinhos Parede
+	
+	glColor3f(1,0.5, 0);
+	
+	glBegin(GL_QUADS);
+    glVertex2f(350, 100); // Canto superior esquerdo quadrado 1
+    glVertex2f(450, 100); // Canto superior direito quadrado 1
+    glVertex2f(450, 150); // Canto inferior direito quadrado 1
+    glVertex2f(350, 150); // Canto inferior esquerdo quadrado 1
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	glVertex2f(750, 100); // Canto superior esquerdo quadrado 2 (do outro lado da porta)
+	glVertex2f(850, 100); // Canto superior direito quadrado 2 (do outro lado da porta)
+	glVertex2f(850, 150); // Canto inferior direito quadrado 2 (do outro lado da porta)
+	glVertex2f(750, 150); // Canto inferior esquerdo quadrado 2 (do outro lado da porta)
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	glVertex2f(400, 400); // Canto superior esquerdo quadrado diagonal
+	glVertex2f(525, 400); // Canto superior direito quadrado diagonal
+	glVertex2f(525, 350); // Canto inferior esquerdo quadrado diagonal
+	glVertex2f(400, 350); // Canto inferior direito quadrado diagonal
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	glVertex2f(675, 400); // Canto superior esquerdo quadrado diagonal
+	glVertex2f(800, 400); // Canto superior direito quadrado diagonal
+	glVertex2f(800, 350); // Canto inferior esquerdo quadrado diagonal
+	glVertex2f(675, 350); // Canto inferior direito quadrado diagonal
+	glEnd();
+	
     glFlush(); // manda o OpenGl renderizar as primitivas
 
 }
