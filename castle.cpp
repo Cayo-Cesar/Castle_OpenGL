@@ -1,9 +1,3 @@
-/*
- * Computacao Grafica
- * Codigo Exemplo: Primeira Janela GLUT/OpenGL
- * Autor: Prof. Laurindo de Sousa Britto Neto
- */
- 
 // Bibliotecas utilizadas pelo OpenGL
 #ifdef __APPLE__ // MacOS
     #define GL_SILENCE_DEPRECATION
